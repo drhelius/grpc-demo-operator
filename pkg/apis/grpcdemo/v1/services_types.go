@@ -17,28 +17,18 @@ type ServicesSpec struct {
 
 // Service defines the desired state of a Service
 type Service struct {
-	Name     string `json:"name"`
-	Image    string `json:"image"`
-	Version  string `json:"version"`
-	Replicas int32  `json:"replicas"`
-	// +kubebuilder:validation:Optional
-	Route string `json:"route"`
-	// +kubebuilder:validation:Optional
-	IstioConfig Istio     `json:"istio"`
-	Limits      Resources `json:"limits"`
-	Requests    Resources `json:"requests"`
+	Name     string    `json:"name"`
+	Image    string    `json:"image"`
+	Version  string    `json:"version"`
+	Replicas int32     `json:"replicas"`
+	Limits   Resources `json:"limits"`
+	Requests Resources `json:"requests"`
 }
 
 // Resources defines the desired resources for limits and requests
 type Resources struct {
 	CPU    string `json:"cpu"`
 	Memory string `json:"memory"`
-}
-
-// Istio defines the desired configuration state of a Service running with Istio
-type Istio struct {
-	InjectSidecard bool `json:"injectSidecar"`
-	Expose         bool `json:"expose"`
 }
 
 // ServiceStatus defines the observed state of a single Service

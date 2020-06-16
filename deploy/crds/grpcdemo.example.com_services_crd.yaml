@@ -41,18 +41,6 @@ spec:
                   properties:
                     image:
                       type: string
-                    istio:
-                      description: Istio defines the desired configuration state of
-                        a Service running with Istio
-                      properties:
-                        expose:
-                          type: boolean
-                        injectSidecar:
-                          type: boolean
-                      required:
-                      - expose
-                      - injectSidecar
-                      type: object
                     limits:
                       description: Resources defines the desired resources for limits
                         and requests
@@ -82,8 +70,6 @@ spec:
                       - cpu
                       - memory
                       type: object
-                    route:
-                      type: string
                     version:
                       type: string
                   required:
