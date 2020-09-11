@@ -1,0 +1,46 @@
+apiVersion: grpcdemo.example.com/v1
+kind: DemoServices
+metadata:
+  name: example-services
+spec:
+  services:
+    - name: account
+      image: quay.io/isanchez/grpc-demo-account
+      version: v1.0.0
+      replicas: 1
+      limits:
+        memory: 200Mi
+        cpu: "0.5"
+      requests:
+        memory: 100Mi
+        cpu: "0.1"
+    - name: order
+      image: quay.io/isanchez/grpc-demo-order
+      version: v1.0.0
+      replicas: 1
+      limits:
+        memory: 200Mi
+        cpu: "0.5"
+      requests:
+        memory: 100Mi
+        cpu: "0.1"
+    - name: product
+      image: quay.io/isanchez/grpc-demo-product
+      version: v1.0.0
+      replicas: 1
+      limits:
+        memory: 200Mi
+        cpu: "0.5"
+      requests:
+        memory: 100Mi
+        cpu: "0.1"
+    - name: user
+      image: quay.io/isanchez/grpc-demo-user
+      version: v1.0.0
+      replicas: 1
+      limits:
+        memory: 200Mi
+        cpu: "0.5"
+      requests:
+        memory: 100Mi
+        cpu: "0.1"
