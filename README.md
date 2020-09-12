@@ -40,7 +40,7 @@ grpc-demo-operator-controller-manager   1/1     1            1           2m56s
 
 The operator is watching custom resources with kind `demoservices.grpcdemo.example.com`.
 
-Write a sample [custom resource](config/samples/grpcdemo_v1_demoservices.yaml):
+Write a [sample custom resource](config/samples/grpcdemo_v1_demoservices.yaml):
 
 ```yaml
 apiVersion: grpcdemo.example.com/v1
